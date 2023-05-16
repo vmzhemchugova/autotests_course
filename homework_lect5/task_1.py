@@ -7,6 +7,12 @@
 
 
 def letter_stat(our_str):
+    """
+    Функция подсчитывает количество букв в переданном слове,
+    выполняет подсчет частоты букв и возвращает статистику в формате словаря.
+    :param our_str: строка.
+    :return: статистика частоты букв в строке в формате словаря.
+    """
     set_str = set([our_str[i] for i in range(len(our_str))])
     count_letters = [our_str.count(i) for i in set_str]
     letters_dict = dict(zip(set_str, count_letters))
