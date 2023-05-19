@@ -16,14 +16,24 @@ def to_roman(val):
     :param val: арабское число, которое необходимо преобразовать.
     :return: римское число (строка)
     """
-    dict_char = {'M': 1000, 'CM': 900, 'D': 500, 'CD': 400, 'C': 100, 'XC': 90, 'L': 50, 'XL': 40, 'X': 10, 'IX': 9,
-                 'V': 5, 'IV': 4, 'I': 1}
+    dict_char = {'M': 1000,
+                 'CM': 900,
+                 'D': 500,
+                 'CD': 400,
+                 'C': 100,
+                 'XC': 90,
+                 'L': 50,
+                 'XL': 40,
+                 'X': 10,
+                 'IX': 9,
+                 'V': 5,
+                 'IV': 4,
+                 'I': 1}
     roman_str = ''
-    while val != 0:
-        for char, value in dict_char.items():
-            while val >= value:
-                roman_str += char
-                val -= value
+    for char, value in dict_char.items():
+        while val >= value:
+            roman_str += char
+            val -= value
     return roman_str
 
 
