@@ -27,7 +27,7 @@ class Segment:
         Проверяет, пересекает ли отрезок ось абсцисс.
         :return: пересекает - True, не пересекает - False (bool)
         """
-        if (self.x2 <= 0 <= self.x1) or (self.x2 >= 0 >= self.x1):
+        if (self.y2 <= 0 <= self.y1) or (self.y2 >= 0 >= self.y1):
             return True
         else:
             return False
@@ -37,7 +37,7 @@ class Segment:
         Проверяет, пересекает ли отрезок ось ординат.
         :return: пересекает - True, не пересекает - False (bool)
         """
-        if (self.y2 <= 0 <= self.y1) or (self.y2 >= 0 >= self.y1):
+        if (self.x2 <= 0 <= self.x1) or (self.x2 >= 0 >= self.x1):
             return True
         else:
             return False
