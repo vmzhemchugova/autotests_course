@@ -25,9 +25,7 @@ class PersonInfo:
     def __init__(self, name: str, age: int, *subdivision):
         self.name = name
         self.age = age
-        self.subdivisions = []
-        for division in subdivision:
-            self.subdivisions.append(division)
+        self.subdivisions = subdivision
 
     def short_name(self):
         """

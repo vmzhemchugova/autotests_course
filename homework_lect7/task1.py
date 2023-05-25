@@ -11,8 +11,8 @@
 
 class Segment:
     def __init__(self, coord1: tuple, coord2: tuple):
-        (self.x1, self.y1) = coord1
-        (self.x2, self.y2) = coord2
+        self.x1, self.y1 = coord1
+        self.x2, self.y2 = coord2
 
     def length(self):
         """
@@ -29,8 +29,7 @@ class Segment:
         """
         if (self.y2 <= 0 <= self.y1) or (self.y2 >= 0 >= self.y1):
             return True
-        else:
-            return False
+        return False
 
     def y_axis_intersection(self):
         """
