@@ -41,8 +41,7 @@ class Trigon():
             raise ValueError('Стороны должны быть положительными')
         elif arg[0] >= arg[1] + arg[2] or arg[1] >= arg[0] + arg[2] or arg[2] >= arg[1] + arg[0]:
             raise Exception("Не треугольник")
-        else:
-            self.sides = arg
+        self.sides = arg
 
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
