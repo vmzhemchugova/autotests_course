@@ -42,11 +42,15 @@ try:
     assert add_btn.is_displayed(), 'Кнопка для создания сообщения не отображается'
     add_btn.click()
     sleep(2)
-    search = driver.find_element(By.CSS_SELECTOR, '.controls-StackTemplate-content [name="ws-input_2023-06-12"]')
+    search = driver.find_element(By.CSS_SELECTOR, '[templatename="Addressee/popup:Stack"] .controls-Field')
     assert search.is_displayed(), 'Поле поиска не отображается'
     search.send_keys('Раскольников', Keys.ENTER)
     sleep(1)
-    search.send_keys(Keys.ENTER)
+    my_employ = driver.find_element(By.CSS_SELECTOR,
+                                    '[templatename="Addressee/popup:Stack"] [title = "Раскольников Родион"]')
+
+    assert my_employ.is_displayed(), 'Сотрудник не отображается для выбора'
+    my_employ.click()
     sleep(2)
     text_box = driver.find_element(By.CSS_SELECTOR, '[data-qa="textEditor_slate_Field"]')
     assert text_box.is_displayed(), 'Текстовое поле для ввода сообщение не отображается'
